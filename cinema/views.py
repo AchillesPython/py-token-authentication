@@ -40,7 +40,8 @@ class GenreViewSet(
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 
-class ActorViewSet(mixins.ListModelMixin,
+class ActorViewSet(
+    mixins.ListModelMixin,
     mixins.CreateModelMixin,
     viewsets.GenericViewSet
 ):
@@ -50,7 +51,8 @@ class ActorViewSet(mixins.ListModelMixin,
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 
-class CinemaHallViewSet(mixins.ListModelMixin,
+class CinemaHallViewSet(
+    mixins.ListModelMixin,
     mixins.CreateModelMixin,
     viewsets.GenericViewSet
 ):
@@ -107,7 +109,8 @@ class MovieViewSet(
         return MovieSerializer
 
 
-class MovieSessionViewSet(mixins.ListModelMixin,
+class MovieSessionViewSet(
+    mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
     mixins.CreateModelMixin,
     mixins.UpdateModelMixin,
@@ -157,7 +160,8 @@ class OrderPagination(PageNumberPagination):
     max_page_size = 100
 
 
-class OrderViewSet(mixins.ListModelMixin,
+class OrderViewSet(
+    mixins.ListModelMixin,
     mixins.CreateModelMixin,
     viewsets.GenericViewSet
 ):
